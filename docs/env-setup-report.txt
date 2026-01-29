@@ -1,0 +1,10 @@
+Lab 1
+Environment Setup Report
+I initialised a repository locally and pushed it to a private GitHub repository. I included a readme file stating the objective of Lab 1. After that, I opened the codespace to begin the work.
+I already know Python, but not SPADE or XMPP. I searched both to understand how to use them for the outlined lab objective. My findings show that XMPP is an open-source instant messaging platform created by the Jabber Foundation in 1999. It was a good alternative to closed IM systems. The platform enables communication through message channels and logic built around its XML-based protocol. It can be installed and used via a server.
+SPADE was developed in 2000 to support research in intelligent agents. SPADE 3 in 2020 introduced new features and applications for designing and simulating agent systems and environments. SPADE is a framework built on top of XMPP.
+To start, we verify Python3, SPADE, and an XMPP server. We use Docker to isolate and run the XMPP server for the SPADE agent we plan to build.
+To program with XMPP, I checked the documentation and did some AI-powered searching to learn the key concepts. Jabber Identification (JID) is the unique address for each client or resource. Stanzas are the basic packet types you send and receive. A message refers to communication between users. Presence refers to a status, such as being offline or online. IQ refers to information queries which are used to request and modify data from the server to the client.
+I verified SPADE installation with pip show spade, pip install spade, and by importing spade to print its version. I registered and used a remote XMPP server from XMPP.JP which is a free messaging service.
+In summary, I initialised the repository locally, pushed it to GitHub, and used the codespace to set up the SPADE agent with the remote XMPP credentials as the environment.
+
