@@ -11,3 +11,25 @@ SPADE: Smart Python Agent Development Environment
 XMPP: Extensible Messaging and Presence Protocol
 
 2. Implement agent perception of environmental and disaster-related events
+
+
+# Quick References
+
+## Installation (in codebase-helps avoid internal sub process rust package error)
+```bash
+python3 -m pip install -r spade, 
+python3 -m pip freeze > requirements.txt
+```
+
+## Running the Agents
+```bash
+# Run the spade server
+spade run
+
+# Run the agent script
+python3 rb.py
+
+# Press Ctrl+C to stop the agents
+```
+
+**Note:** This script uses SPADE's embedded XMPP server, so no separate server setup is needed.
