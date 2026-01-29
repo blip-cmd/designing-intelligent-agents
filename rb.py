@@ -51,7 +51,7 @@ class SensorAgent(spade.agent.Agent):
             print(log_entry)
             
             # Append to file 
-            with open("logs/log-sensor-agent.txt", "a") as f:
+            with open("logs/logs-sensor-agent.txt", "a") as f:
                 f.write(log_entry + "\n")
 
         async def on_end(self):
