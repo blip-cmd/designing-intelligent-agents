@@ -17,14 +17,19 @@ XMPP: Extensible Messaging and Presence Protocol
 
 ## Installation (in codebase-helps avoid internal sub process rust package error)
 ```bash
-python3 -m pip install -r spade, 
-python3 -m pip freeze > requirements.txt
+python3 -m pip install spade
+# python3 -m pip freeze > requirements.txt
 ```
 
 ## Running the Agents
 ```bash
 # Run the spade server
 spade run
+
+# end busy port
+lsof -i :5222 #returns PID
+kill -9 <PID>
+
 
 # Run the agent script
 python3 rb.py
