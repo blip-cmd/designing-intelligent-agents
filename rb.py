@@ -8,6 +8,8 @@ class HelloAgent(spade.agent.Agent):
         print("agent.rb says hi!")
 
 class SensorAgent(spade.agent.Agent):
+    #to simulate periodic sensor readings and log perceptual events
+    #TODO: conditions will be updated after a redesign
     async def setup(self):
         print("SensorAgent started")
         self.add_behaviour(self.SensorBehaviour(period=7))
@@ -50,13 +52,29 @@ class SensorAgent(spade.agent.Agent):
             print("SensorBehaviour ended")
 
 async def main():
-    agent = HelloAgent("blip@xmpp.jp", "Niiola70$$xmpp")
-    sensor_agent = SensorAgent("blip1@xmpp.jp", "Niiola70$$xmpp")
+    # # Create agents using SPADE's embedded XMPP server
+    # agent = HelloAgent("agent@localhost", "password")
+    # sensor_agent = SensorAgent("sensor_agent@localhost", "password")
+
+    # agent = HelloAgent("blip@xmpp.jp", "Niiola70$$xmpp")
+    # sensor_agent = SensorAgent("blip1@xmpp.jp", "Niiola70$$xmpp")
+
+    agent = HelloAgent("blip@localhost", "Niiola70$$xmpp")
+    sensor_agent = SensorAgent("blip1@localhost", "Niiola70$$xmpp")
+    
     await agent.start()
     await sensor_agent.start()
-    await asyncio.sleep(20)
-    await agent.stop()
-    await sensor_agent.stop()
+    
+    print("Agents running. Press Ctrl+C to stop...")
+    try:
+        # Run indefinitely until interrupted
+        while True:
+            await asyncio.sleep(1)
+    except KeyboardInterrupt:
+        print("\nStopping agents...")
+    finally:
+        await agent.stop()
+        await sensor_agent.stop()
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    spade.run(main())
