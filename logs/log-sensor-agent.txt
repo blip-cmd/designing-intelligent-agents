@@ -4,3 +4,7 @@
 [LOG][SENSOR AGENT][29 Jan 2026 11:22:47] Disaster event detected: Critical Damage
 [LOG][SENSOR AGENT][29 Jan 2026 11:22:54] Disaster event detected: Mild Damage
 [LOG][SENSOR AGENT][29 Jan 2026 11:23:01] Disaster event detected: Severe Damage
+[LOG][SENSOR AGENT][29 Jan 2026 11:34:57] Severe Damage detected. Raw Metrics: (W:1.1m, T:93.1C, S:35.4%)
+[LOG][SENSOR AGENT][29 Jan 2026 11:35:04] Severe Damage detected. Raw Metrics: (W:3.3m, T:37.7C, S:16.4%)
+[LOG][SENSOR AGENT][29 Jan 2026 11:35:11] Severe Damage detected. Raw Metrics: (W:3.7m, T:75.5C, S:4.7%)
+[LOG][SENSOR AGENT][29 Jan 2026 11:35:18] Severe Damage detected. Raw Metrics: (W:3.7m, T:77.6C, S:60.9%)
