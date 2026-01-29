@@ -1,0 +1,6 @@
+[LOG][SENSOR AGENT][29 Jan 2026 11:01:50] Disaster event detected: Safe
+[LOG][SENSOR AGENT][29 Jan 2026 11:01:57] Disaster event detected: Critical Damage
+[LOG][SENSOR AGENT][29 Jan 2026 11:02:04] Disaster event detected: Mild Damage
+[LOG][SENSOR AGENT][29 Jan 2026 11:22:47] Disaster event detected: Critical Damage
+[LOG][SENSOR AGENT][29 Jan 2026 11:22:54] Disaster event detected: Mild Damage
+[LOG][SENSOR AGENT][29 Jan 2026 11:23:01] Disaster event detected: Severe Damage
