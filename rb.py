@@ -2,10 +2,16 @@ import spade
 import asyncio
 import random
 import datetime
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # loads .env from project root
+xmpp_password = os.getenv("pass") or "password"
+os.makedirs("logs", exist_ok=True)
 
 class HelloAgent(spade.agent.Agent):
     async def setup(self):
-        print("agent.rb says hi!")
+        print("Safety Officer R.B. on duty!")
 
 class SensorAgent(spade.agent.Agent):
     #to simulate periodic sensor readings and log perceptual events
@@ -53,14 +59,12 @@ class SensorAgent(spade.agent.Agent):
 
 async def main():
     # # Create agents using SPADE's embedded XMPP server
-    # agent = HelloAgent("agent@localhost", "password")
-    # sensor_agent = SensorAgent("sensor_agent@localhost", "password")
+    agent = HelloAgent("agent@localhost", "password")
+    sensor_agent = SensorAgent("sensor_agent@localhost", "password")
 
-    # agent = HelloAgent("blip@xmpp.jp", "Niiola70$$xmpp")
-    # sensor_agent = SensorAgent("blip1@xmpp.jp", "Niiola70$$xmpp")
-
-    agent = HelloAgent("blip@localhost", "Niiola70$$xmpp")
-    sensor_agent = SensorAgent("blip1@localhost", "Niiola70$$xmpp")
+    
+    # agent = HelloAgent("blip@xmpp.jp", env.pass)
+    # sensor_agent = SensorAgent("blip1@xmpp.jp", env.pass)
     
     await agent.start()
     await sensor_agent.start()
