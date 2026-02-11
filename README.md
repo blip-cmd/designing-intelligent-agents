@@ -11,6 +11,8 @@ SPADE: Smart Python Agent Development Environment
 XMPP: Extensible Messaging and Presence Protocol
 
 2. Implement agent perception of environmental and disaster-related events
+3. model agent goals and event-triggered behavior.
+
 
 
 # Quick References

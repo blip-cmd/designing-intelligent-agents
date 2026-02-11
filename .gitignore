@@ -1,3 +1,4 @@
 server.db
 logs/logs-sensor-agent.txt
 .env
+.github/agents/study-g.agent.md
